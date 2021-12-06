@@ -1,7 +1,7 @@
 Issues caused by Deallocating a VMSS
 
 ## **Scenario**
-To save cost, some customer want to put their service fabric to sleep when we not in use, and then only start it when we need to use it. They assume they can deallocate the scaleset to achieve this. However, the problem is once the scaleset is deallocated, restarting them dows not always work and often the deployed services are failed and need to be redeployed.
+To save cost, some customer want to put their service fabric to sleep when we not in use, and then only start it when we need to use it. They assume they can deallocate the scaleset to achieve this. However, the problem is once the scaleset is deallocated, restarting them does not always work and often the deployed services are failed and need to be redeployed.
 
 ## **Recommendation**
 We do not recommend deallocating a VMSS for Service Fabric Clusters, this is essentially the same as scaling to 0 nodes in the Primary nodetype and will cause cluster instability or dataloss..
